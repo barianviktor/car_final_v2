@@ -1,0 +1,30 @@
+<div class="smartcard-item">
+  <h4>#{{ index + 1 }} Smartcard</h4>
+  <app-form-text-input
+    [control]="image"
+    [label]="'Smartcard Image'"
+    [placeholder]="'Please insert an image url'"
+  ></app-form-text-input>
+  <div class="smartcard-image-container">
+    <img (click)="addSmartPoint($event)" [src]="image.value" />
+    <app-smartpoint-icon
+      *ngFor="let smartpoint of smartpoints.controls; let i = index"
+      [x]="smartpoint.value.x"
+      [y]="smartpoint.value.y"
+      [selected]="openedSmartPoint == i"
+      (click)="handleSmartPoint(i)"
+    ></app-smartpoint-icon>
+  </div>
+  <div>
+    <app-smartpoint-form
+      *ngFor="let smartpoint of smartpoints.controls; let i = index"
+      [smartpoint]="castAbsToFg(smartpoint)"
+      [selected]="openedSmartPoint == i"
+      [index]="i"
+      (deleteSmartpoint)="removeSmartpoint($event)"
+      (selectSmartpoint)="handleSmartPoint($event)"
+    >
+    </app-smartpoint-form>
+  </div>
+  <button (click)="onDelete()" class="btn btn-danger">Delete Smartcard</button>
+</div>
