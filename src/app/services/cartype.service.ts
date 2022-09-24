@@ -52,21 +52,6 @@ export class CartypeService {
     title: string,
     titleImage: Iimage
   ) {
-    /*   let images$: Observable<Iimage>[] = [];
-    let articles$: Observable<Iarticledto>[] = [];
-    let smartcards$: Observable<Ismartcarddto>[] = [];
-    images.forEach((image) => {
-      images$.push(this.imageService.addImage$(image));
-    });
-
-    articles.forEach((article) => {
-      articles$.push(this.articleService.addArticle$(article));
-    });
-
-    smartcards.forEach((smartcard) => {
-      smartcards$.push(this.smartcardService.addSmartCard$(smartcard));
-    });
- */
     forkJoin({
       articles: from(articles).pipe(
         mergeMap((article: Iarticle) => {
@@ -128,37 +113,42 @@ export class CartypeService {
       )
       .subscribe((x) => console.log(x));
   }
-  getCartypes$(): Observable<Icartypedto[]> {
-    return this.http.get<Icartypedto[]>(environment.api + '/cartypes');
-  }
-  getCartype$(id: number): Observable<any> {
-    return this.http.get<Icartypedto>(environment.api + '/cartypes/' + id).pipe(
-      switchMap((cartype: Icartypedto) => {
-        return forkJoin({
-          cartype: of(cartype),
-          articles: from(cartype.articles).pipe(
-            mergeMap((index: number) => {
-              return this.articleService.getArticle$(index);
-            }),
-            toArray()
-          ),
-          smartcards: from(cartype.smartcards).pipe(
-            mergeMap((index: number) => {
-              return this.smartcardService.getSmartCard$(index);
-            }),
-            toArray()
-          ),
-          images: from(cartype.images).pipe(
-            mergeMap((index: number) => {
-              return this.imageService.getImage$(index);
-            }),
-            toArray()
-          ),
-          design: this.designService.getDesign$(cartype.design),
-          titleImage: this.imageService.getImage$(cartype.titleImage),
-          model: this.modelService.getModel$(cartype.model),
-        });
+  getCartypes$(): Observable<Icartype[]> {
+    return this.http.get<Icartypedto[]>(environment.api + '/cartypes').pipe(
+      switchMap((cartypes: Icartypedto[]) => {
+        return from(cartypes);
       }),
+      mergeMap((cartype: Icartypedto) => {
+        return this.getDatasToCartype$(cartype);
+      }),
+      toArray()
+    );
+  }
+  getDatasToCartype$(cartype: Icartypedto): Observable<Icartype> {
+    return forkJoin({
+      cartype: of(cartype),
+      articles: from(cartype.articles).pipe(
+        mergeMap((index: number) => {
+          return this.articleService.getArticle$(index);
+        }),
+        toArray()
+      ),
+      smartcards: from(cartype.smartcards).pipe(
+        mergeMap((index: number) => {
+          return this.smartcardService.getSmartCard$(index);
+        }),
+        toArray()
+      ),
+      images: from(cartype.images).pipe(
+        mergeMap((index: number) => {
+          return this.imageService.getImage$(index);
+        }),
+        toArray()
+      ),
+      design: this.designService.getDesign$(cartype.design),
+      titleImage: this.imageService.getImage$(cartype.titleImage),
+      model: this.modelService.getModel$(cartype.model),
+    }).pipe(
       map(
         (fj: {
           cartype: Icartypedto;
@@ -183,6 +173,13 @@ export class CartypeService {
           return cartype;
         }
       )
+    );
+  }
+  getCartype$(id: number): Observable<Icartype> {
+    return this.http.get<Icartypedto>(environment.api + '/cartypes/' + id).pipe(
+      switchMap((cartype: Icartypedto) => {
+        return this.getDatasToCartype$(cartype);
+      })
     );
   }
 }

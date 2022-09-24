@@ -4,6 +4,9 @@
       <p>{{ cartype | json }}</p>
     </div>
   </div>
+  <div>
+    {{ cartype$ | async | json }}
+  </div>
   <a [routerLink]="['new']">
     <button class="btn btn-dark">New</button>
   </a>
