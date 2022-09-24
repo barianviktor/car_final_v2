@@ -12,6 +12,10 @@ export class CartypeForm extends FormGroup<IcartypeForm> {
         validators: [Validators.required, Validators.min(1)],
         nonNullable: true,
       }),
+      maker: new FormControl(0, {
+        validators: [Validators.required],
+        nonNullable: true,
+      }),
       design: new FormControl(1, {
         validators: [Validators.required, Validators.min(1)],
         nonNullable: true,

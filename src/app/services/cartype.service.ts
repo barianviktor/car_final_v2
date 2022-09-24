@@ -9,6 +9,7 @@ import {
   Observable,
   of,
   map,
+  debounceTime,
 } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Iarticledto } from '../shared/interfaces/dto/iarticledto';
@@ -19,11 +20,13 @@ import { Iarticle } from '../shared/interfaces/models/iarticle';
 import { Icartype } from '../shared/interfaces/models/icartype';
 import { Idesign } from '../shared/interfaces/models/idesign';
 import { Iimage } from '../shared/interfaces/models/iimage';
+import { Imaker } from '../shared/interfaces/models/imaker';
 import { Imodel } from '../shared/interfaces/models/imodel';
 import { Ismartcard } from '../shared/interfaces/models/ismartcard';
 import { ArticleService } from './article.service';
 import { DesignService } from './design.service';
 import { ImageService } from './image.service';
+import { MakerService } from './maker.service';
 import { ModelService } from './model.service';
 import { SmartcardService } from './smartcard.service';
 
@@ -37,7 +40,8 @@ export class CartypeService {
     private articleService: ArticleService,
     private smartcardService: SmartcardService,
     private modelService: ModelService,
-    private designService: DesignService
+    private designService: DesignService,
+    private makerService: MakerService
   ) {}
 
   //getCartypes():Observable<Icartype[]>{}
@@ -50,22 +54,28 @@ export class CartypeService {
     design: number,
     seats: number,
     title: string,
-    titleImage: Iimage
+    titleImage: Iimage,
+    maker: number
   ) {
     forkJoin({
       articles: from(articles).pipe(
+        debounceTime(200),
         mergeMap((article: Iarticle) => {
           return this.articleService.addArticle$(article);
         }),
         toArray()
       ),
       images: from(images).pipe(
+        debounceTime(100),
+
         mergeMap((image: Iimage) => {
           return this.imageService.addImage$(image);
         }),
         toArray()
       ),
       smartcards: from(smartcards).pipe(
+        debounceTime(300),
+
         mergeMap((smartcard: Ismartcard) => {
           return this.smartcardService.addSmartCard$(smartcard);
         }),
@@ -106,6 +116,7 @@ export class CartypeService {
               seats: seats,
               title: title,
               titleImage: fj.titleImage.id!,
+              maker: maker,
             };
             return this.http.post(environment.api + '/cartypes', cartypedto);
           }
@@ -148,6 +159,7 @@ export class CartypeService {
       design: this.designService.getDesign$(cartype.design),
       titleImage: this.imageService.getImage$(cartype.titleImage),
       model: this.modelService.getModel$(cartype.model),
+      maker: this.makerService.getMaker$(cartype.maker),
     }).pipe(
       map(
         (fj: {
@@ -158,6 +170,7 @@ export class CartypeService {
           titleImage: Iimage;
           model: Imodel;
           design: Idesign;
+          maker: Imaker;
         }) => {
           let cartype: Icartype = {
             id: fj.cartype.id!,
@@ -169,6 +182,7 @@ export class CartypeService {
             model: fj.model,
             design: fj.design,
             images: fj.images,
+            maker: fj.maker,
           };
           return cartype;
         }

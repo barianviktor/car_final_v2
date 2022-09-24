@@ -13,6 +13,7 @@ import { ModelForm } from '../../util/models/ModelForm';
 export class ModelFormInputComponent implements OnInit {
   makers$: Observable<Imaker[]>;
   @Input() modelForm!: ModelForm;
+  @Input() makerForm!: FormControl;
   constructor(private makerService: MakerService) {
     this.makers$ = makerService.getMakers();
   }
@@ -24,9 +25,7 @@ export class ModelFormInputComponent implements OnInit {
   }
   setMaker(makerId: number | undefined) {
     this.maker.setValue(makerId);
-    console.log(this.modelForm);
+    this.makerForm.setValue(makerId);
   }
-  ngOnInit(): void {
-    console.log(this.modelForm);
-  }
+  ngOnInit(): void {}
 }

@@ -48,6 +48,9 @@ export class CartypesNewComponent implements OnInit {
   get model(): ModelForm {
     return this.cartypeForm.get('model') as ModelForm;
   }
+  get maker(): FormControl {
+    return this.cartypeForm.get('maker') as FormControl;
+  }
   ngOnInit(): void {}
   populateForm() {
     //this.articles.push(new ArticleForm());
@@ -56,6 +59,7 @@ export class CartypesNewComponent implements OnInit {
         name: 'Class-A',
         maker: 1,
       },
+      maker: 1,
       seats: 5,
       design: 1,
       title: 'A-osztály limuzin.',
@@ -150,6 +154,7 @@ export class CartypesNewComponent implements OnInit {
     this.design.setValue(dummy.design);
     this.title.setValue(dummy.title);
     this.titleImage.setValue(dummy.titleImage);
+    this.maker.setValue(dummy.maker);
   }
   createImageObject(url: string): Iimage {
     return {
@@ -206,7 +211,8 @@ export class CartypesNewComponent implements OnInit {
       this.design.value,
       this.seats.value,
       this.title.value,
-      this.createImageObject(this.titleImage.value)
+      this.createImageObject(this.titleImage.value),
+      this.maker.value
     );
   }
   handleSubmit() {

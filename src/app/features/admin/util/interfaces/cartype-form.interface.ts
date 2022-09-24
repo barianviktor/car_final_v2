@@ -12,4 +12,5 @@ export interface IcartypeForm {
   articles: FormArray<FormGroup<IArticleForm>>;
   smartcards: FormArray<FormGroup<IsmartcardForm>>;
   images: FormArray<FormControl<string>>;
+  maker: FormControl<number>;
 }

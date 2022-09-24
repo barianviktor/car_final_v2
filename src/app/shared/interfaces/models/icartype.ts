@@ -1,6 +1,7 @@
 import { Iarticle } from './iarticle';
 import { Idesign } from './idesign';
 import { Iimage } from './iimage';
+import { Imaker } from './imaker';
 import { Imodel } from './imodel';
 import { Imotor } from './imotor';
 import { Ismartcard } from './ismartcard';
@@ -15,4 +16,5 @@ export interface Icartype {
   model: Imodel;
   design: Idesign;
   images: Iimage[];
+  maker: Imaker;
 }

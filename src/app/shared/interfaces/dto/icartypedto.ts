@@ -10,4 +10,5 @@ export interface Icartypedto {
   seats: number;
   title: string;
   titleImage: number;
+  maker: number;
 }
