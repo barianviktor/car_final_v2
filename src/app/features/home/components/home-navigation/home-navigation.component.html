@@ -1,2 +1,31 @@
-<p>home-navigation works!</p>
-<a href="/admin">admin</a>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="contaienr-fluid p-1">
+    <a class="navbar-brand" [routerLink]="['/']">Logo</a>
+    <div class="nav-item">
+      <a [routerLink]="['search']" routerLinkActive="active" class="nav-link"
+        >Find Car
+      </a>
+    </div>
+    <!--   
+      <div class="nav-item">
+        <a [routerLink]="['colors']" routerLinkActive="active" class="nav-link"
+          >Colors
+        </a>
+      </div>
+      <div class="nav-item">
+        <a [routerLink]="['makers']" routerLinkActive="active" class="nav-link"
+          >Makers
+        </a>
+      </div>
+      <div class="nav-item">
+        <a [routerLink]="['cartypes']" routerLinkActive="active" class="nav-link"
+          >Car types
+        </a>
+      </div>
+      <div class="nav-item">
+        <a [routerLink]="['designs']" routerLinkActive="active" class="nav-link"
+          >Designs
+        </a>
+      </div> -->
+  </div>
+</nav>

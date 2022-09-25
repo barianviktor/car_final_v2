@@ -13,14 +13,8 @@ import { Icartype } from 'src/app/shared/interfaces/models/icartype';
 })
 export class CartypesHomeComponent implements OnInit {
   cartypes$: Observable<Icartype[]>;
-  cartype$: Observable<Icartype>;
-  constructor(
-    private cartypeService: CartypeService,
-    private articleService: ArticleService,
-    private smartcardService: SmartcardService
-  ) {
+  constructor(private cartypeService: CartypeService) {
     this.cartypes$ = cartypeService.getCartypes$();
-    this.cartype$ = cartypeService.getCartype$(1);
   }
   ngOnInit(): void {}
 }

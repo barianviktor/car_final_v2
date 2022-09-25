@@ -18,6 +18,9 @@ export class MakerService {
   getMakers(): Observable<Imaker[]> {
     return this.http.get<Imaker[]>(environment.api + '/makers');
   }
+  getMakers$(): Observable<Imaker[]> {
+    return this.http.get<Imaker[]>(environment.api + '/makers');
+  }
   getMaker$(id: number): Observable<Imaker> {
     return this.http.get<Imaker>(environment.api + '/makers/' + id);
   }

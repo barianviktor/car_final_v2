@@ -1,0 +1,7 @@
+<div>
+  <div *ngIf="makers$ | async as makers">
+    <div (click)="selectMaker(maker.id!)" *ngFor="let maker of makers">
+      {{ maker.name }}
+    </div>
+  </div>
+</div>

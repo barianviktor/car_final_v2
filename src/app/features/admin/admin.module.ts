@@ -21,6 +21,10 @@ import { ModelFormInputComponent } from './components/model-form-input/model-for
 import { SmartCardFormComponent } from './components/smart-card-form/smart-card-form.component';
 import { SmartCardsListComponent } from './components/smart-cards-list/smart-cards-list.component';
 import { SmartpointFormComponent } from './components/smartpoint-form/smartpoint-form.component';
+import { CarsHomeComponent } from './pages/cars/cars-home/cars-home.component';
+import { CarsNewComponent } from './pages/cars/cars-new/cars-new.component';
+import { ColorsFormListComponent } from './components/colors-form-list/colors-form-list.component';
+import { PriceFormInputComponent } from './components/price-form-input/price-form-input.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { SmartpointFormComponent } from './components/smartpoint-form/smartpoint
     SmartCardFormComponent,
     SmartCardsListComponent,
     SmartpointFormComponent,
+    CarsHomeComponent,
+    CarsNewComponent,
+    ColorsFormListComponent,
+    PriceFormInputComponent,
   ],
   imports: [SharedModule, AdminRoutingModule],
 })

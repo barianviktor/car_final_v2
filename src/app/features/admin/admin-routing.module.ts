@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { CarsHomeComponent } from './pages/cars/cars-home/cars-home.component';
+import { CarsNewComponent } from './pages/cars/cars-new/cars-new.component';
 import { CartypesHomeComponent } from './pages/cartypes/cartypes-home/cartypes-home.component';
 import { CartypesNewComponent } from './pages/cartypes/cartypes-new/cartypes-new.component';
 import { ColorsHomeComponent } from './pages/colors/colors-home/colors-home.component';
@@ -46,6 +48,14 @@ const routes: Routes = [
       {
         path: 'designs/new',
         component: DesignsNewComponent,
+      },
+      {
+        path: 'cars',
+        component: CarsHomeComponent,
+      },
+      {
+        path: 'cars/new',
+        component: CarsNewComponent,
       },
     ],
   },
