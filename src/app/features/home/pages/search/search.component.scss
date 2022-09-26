@@ -1,0 +1,14 @@
+.search-result{
+    grid-column-start: 3;
+    grid-column-end: 12;
+}
+.search-bar{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+}
+.search-page{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto(12, 1fr);
+}

@@ -1,7 +1,12 @@
-<div>
-  <div *ngIf="makers$ | async as makers">
-    <div (click)="selectMaker(maker.id!)" *ngFor="let maker of makers">
-      {{ maker.name }}
-    </div>
+<div class="makers-container" *ngIf="makers$ | async as makers">
+  <div
+    class="maker-item"
+    [class.bg-dark]="currentValue == maker.id"
+    [class.text-light]="currentValue == maker.id"
+    (click)="selectMaker(maker.id!)"
+    *ngFor="let maker of makers"
+  >
+    <img [src]="maker.icon_path" [alt]="maker.name" />
   </div>
 </div>
+<hr />

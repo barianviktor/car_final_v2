@@ -1,4 +1,24 @@
-<p>search works!</p>
-<app-search-designs (selectEmitter)="setDesign($event)"></app-search-designs>
-
-<app-search-makers (selectEmitter)="setMaker($event)"></app-search-makers>
+<div class="search-page">
+  <div class="search-bar">
+    <app-search-designs
+      [currentValue]="queryParams.design"
+      (selectEmitter)="setDesign($event)"
+    ></app-search-designs>
+    <app-search-makers
+      [currentValue]="queryParams.maker"
+      (selectEmitter)="setMaker($event)"
+    ></app-search-makers>
+    <app-search-motors
+      [currentValue]="queryParams.motor"
+      (selectEmitter)="setMotor($event)"
+    ></app-search-motors>
+    <app-search-transmissions
+      [currentValue]="queryParams.transmission"
+      (selectEmitter)="setTransmission($event)"
+    ></app-search-transmissions>
+    <app-search-price></app-search-price>
+    <app-search-seats></app-search-seats>
+    <app-search-model></app-search-model>
+  </div>
+  <section class="search-result"></section>
+</div>

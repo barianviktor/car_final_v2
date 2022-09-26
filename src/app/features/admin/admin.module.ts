@@ -25,6 +25,11 @@ import { CarsHomeComponent } from './pages/cars/cars-home/cars-home.component';
 import { CarsNewComponent } from './pages/cars/cars-new/cars-new.component';
 import { ColorsFormListComponent } from './components/colors-form-list/colors-form-list.component';
 import { PriceFormInputComponent } from './components/price-form-input/price-form-input.component';
+import { LicensePlateFormInputComponent } from './components/license-plate-form-input/license-plate-form-input.component';
+import { CardImageComponent } from './components/card-image/card-image.component';
+import { MotorFormListComponent } from './components/motor-form-list/motor-form-list.component';
+import { TransmissionFormListComponent } from './components/transmission-form-list/transmission-form-list.component';
+import { CartypeFormListComponent } from './components/cartype-form-list/cartype-form-list.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +55,11 @@ import { PriceFormInputComponent } from './components/price-form-input/price-for
     CarsNewComponent,
     ColorsFormListComponent,
     PriceFormInputComponent,
+    LicensePlateFormInputComponent,
+    CardImageComponent,
+    MotorFormListComponent,
+    TransmissionFormListComponent,
+    CartypeFormListComponent,
   ],
   imports: [SharedModule, AdminRoutingModule],
 })

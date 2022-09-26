@@ -5,7 +5,7 @@ import { Imotor } from './imotor';
 import { Itransmission } from './itransmission';
 
 export interface Icar {
-  id: number;
+  id?: number;
   carType: Icartype;
   color: Icolor;
   price: number;

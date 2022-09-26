@@ -1,0 +1,7 @@
+<div>
+  <div *ngIf="motors$ | async as motors">
+    <div (click)="selectMotor(motor.id!)" *ngFor="let motor of motors">
+      {{ motor.name }}
+    </div>
+  </div>
+</div>

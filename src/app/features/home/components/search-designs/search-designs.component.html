@@ -1,7 +1,12 @@
-<div>
-  <div *ngIf="designs$ | async as designs">
-    <div (click)="selectDesign(design.id!)" *ngFor="let design of designs">
-      {{ design.name }}
-    </div>
+<div class="search-desings-container" *ngIf="designs$ | async as designs">
+  <div
+    [class.bg-dark]="currentValue == design.id"
+    [class.text-light]="currentValue == design.id"
+    class="search-desings-item"
+    (click)="selectDesign(design.id!)"
+    *ngFor="let design of designs"
+  >
+    {{ design.name }}
   </div>
 </div>
+<hr />

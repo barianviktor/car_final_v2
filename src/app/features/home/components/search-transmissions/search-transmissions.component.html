@@ -1,0 +1,8 @@
+<div *ngIf="transmissions$ | async as transmissions">
+  <div
+    (click)="selectTransmission(transmission.id)"
+    *ngFor="let transmission of transmissions"
+  >
+    {{ transmission.name }}
+  </div>
+</div>

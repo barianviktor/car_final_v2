@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MakerService } from 'src/app/services/maker.service';
 import { Imaker } from 'src/app/shared/interfaces/models/imaker';
@@ -11,6 +11,7 @@ import { Imaker } from 'src/app/shared/interfaces/models/imaker';
 export class SearchMakersComponent implements OnInit {
   makers$: Observable<Imaker[]>;
   @Output() selectEmitter: EventEmitter<number> = new EventEmitter<number>();
+  @Input() currentValue: number | undefined = undefined;
 
   constructor(private makerService: MakerService) {
     this.makers$ = makerService.getMakers$();

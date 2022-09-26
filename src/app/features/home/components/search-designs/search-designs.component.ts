@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DesignService } from 'src/app/services/design.service';
 import { Idesign } from 'src/app/shared/interfaces/models/idesign';
@@ -11,6 +11,7 @@ import { Idesign } from 'src/app/shared/interfaces/models/idesign';
 export class SearchDesignsComponent implements OnInit {
   designs$: Observable<Idesign[]>;
   @Output() selectEmitter: EventEmitter<number> = new EventEmitter<number>();
+  @Input() currentValue: number | undefined = undefined;
   constructor(private designService: DesignService) {
     this.designs$ = designService.getDesigns$();
   }

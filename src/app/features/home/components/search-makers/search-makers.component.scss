@@ -1,0 +1,17 @@
+.makers-container{
+    width: 100%;
+    grid-template-columns:repeat(2, 50%);
+    grid-auto-flow: row;
+    display: grid;
+    
+}
+.maker-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+.maker-item img {
+    width: 50%;
+}
