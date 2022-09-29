@@ -1,0 +1,36 @@
+{
+  "posts":[
+    {
+      "id":1,
+      "senderId":1,
+      "recieverId":2,
+      "message":"sdasa"
+    }
+  ],
+  "users":[
+    {
+      "id":1,
+      "imagesId":1,
+      "name":"saddsad"
+    },
+    {
+      "id":2,
+      "imagesId":2,
+      "name":"saddsad"
+    }
+  ],
+  "images":[
+    {
+      "id":1,
+      "path":"sadsadsadsadsad"
+    },
+    {
+      "id":2,
+      "path":"sadsadsadsadsad"
+    },
+    {
+      "id":3,
+      "path":"sadsadsadsadsad"
+    }
+  ]
+}
