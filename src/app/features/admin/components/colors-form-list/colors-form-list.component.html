@@ -1,1 +1,15 @@
-<p>colors-form-list works!</p>
+<div>
+  <div *ngIf="colors$ | async as colors">
+    <div
+      class="color-box"
+      [class.selected]="c.id == color.value"
+      [ngStyle]="{ backgroundColor: c.color }"
+      (click)="handleSelectColor(c.id!)"
+      *ngFor="let c of colors"
+    >
+      <div>
+        <p>{{ c.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

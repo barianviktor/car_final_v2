@@ -112,6 +112,12 @@
       "title": "A 250 e Plug-in Hybrid",
       "image": 7,
       "id": 2
+    },
+    {
+      "description": "Analóg precizitás digitális integrációval. A 911 belső tere a hagyományos erősségek és az új lehetőségek házasításával jött létre, sportautóként pedig kimondottan a vezetőre koncentrál.",
+      "title": "Belső tér",
+      "image": 12,
+      "id": 3
     }
   ],
   "images": [
@@ -169,6 +175,36 @@
       "date": "2022-09-26T08:06:31.490Z",
       "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/simple_stage.component.damq4.3305804656391.jpg/A-Class-Saloon_V177_Stage_Overview_2730x1213.jpg",
       "id": 11
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/hu/budapest/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Feature-Description/Feature-description_Interior_911-Carrera.jpg?rev=-1&w=undefined",
+      "id": 12
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM19_0530_11.jpg?rev=-1&w=1000",
+      "id": 13
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM21_3203_6.jpg?rev=-1&w=1920",
+      "id": 14
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM21_3135_2.jpg?rev=-1&w=1920",
+      "id": 15
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Model-Teaser/911/CZ20V03OX0004_rgb.jpg?rev=-1&w=",
+      "id": 16
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM18_3899_8.jpg?rev=-1&w=1920",
+      "id": 17
     }
   ],
   "smartpoints": [
@@ -195,6 +231,30 @@
       "y": 35,
       "image": 6,
       "id": 3
+    },
+    {
+      "description": "Nagyon meno ules",
+      "title": "Ules",
+      "x": 61,
+      "y": 39,
+      "image": 15,
+      "id": 4
+    },
+    {
+      "description": "halulrol is meno",
+      "title": "halulrol is meno",
+      "x": 79,
+      "y": 48,
+      "image": 17,
+      "id": 5
+    },
+    {
+      "description": "elorol is meno",
+      "title": "elorol is meno",
+      "x": 16,
+      "y": 49,
+      "image": null,
+      "id": 6
     }
   ],
   "smartcards": [
@@ -206,6 +266,15 @@
         3
       ],
       "id": 1
+    },
+    {
+      "image": 14,
+      "smartpoints": [
+        4,
+        5,
+        6
+      ],
+      "id": 2
     }
   ],
   "models": [
@@ -218,6 +287,11 @@
       "name": "Class-A",
       "maker": 1,
       "id": 2
+    },
+    {
+      "name": "911 Carrera",
+      "maker": 3,
+      "id": 3
     }
   ],
   "cartypes": [
@@ -238,6 +312,24 @@
       "titleImage": 3,
       "maker": 1,
       "id": 1
+    },
+    {
+      "articles": [
+        3
+      ],
+      "images": [
+        13
+      ],
+      "smartcards": [
+        2
+      ],
+      "model": 3,
+      "design": 2,
+      "seats": 2,
+      "title": "911 Carrera",
+      "titleImage": 16,
+      "maker": 3,
+      "id": 2
     }
   ]
 }

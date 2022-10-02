@@ -44,4 +44,15 @@ export class CarsNewComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  setTransmission(id: number) {
+    this.transmission.value == id
+      ? this.transmission.setValue(null)
+      : this.transmission.setValue(id);
+  }
+  setMotor(id: number) {
+    this.motor.value == id
+      ? this.motor.setValue(null)
+      : this.motor.setValue(id);
+  }
 }

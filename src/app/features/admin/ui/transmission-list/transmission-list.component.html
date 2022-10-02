@@ -1,0 +1,10 @@
+<div>
+  <div *ngIf="transmissions$ | async as transmissions">
+    <app-list-item
+      (clicked)="handleSelectTransmission(transmission.id!)"
+      *ngFor="let transmission of transmissions"
+      [value]="transmission.name"
+      [selected]="selectedValue == transmission.id!"
+    ></app-list-item>
+  </div>
+</div>

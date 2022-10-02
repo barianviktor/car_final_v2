@@ -216,7 +216,7 @@ export class CartypesNewComponent implements OnInit {
     );
   }
   handleSubmit() {
-    this.populateForm();
+    // this.populateForm();
     if (this.cartypeForm.valid) {
       this.generateObject();
       this.router.navigate(['/cartypes']);

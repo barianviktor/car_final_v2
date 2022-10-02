@@ -1,0 +1,10 @@
+<div>
+  <div *ngIf="motors$ | async as motors">
+    <app-list-item
+      (clicked)="handleSelectMotor(motor.id!)"
+      *ngFor="let motor of motors"
+      [value]="motor.name"
+      [selected]="selectedValue == motor.id!"
+    ></app-list-item>
+  </div>
+</div>

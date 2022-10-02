@@ -5,8 +5,16 @@
   [licensePlate]="licensePlate"
 ></app-license-plate-form-input>
 <app-card-image [cardImage]="cardImage"></app-card-image>
-<app-transmission-form-list
+<!-- <app-transmission-form-list
   [transmission]="transmission"
-></app-transmission-form-list>
-<app-motor-form-list [motor]="motor"></app-motor-form-list>
-<app-images-form-list [images]="images"></app-images-form-list>
+></app-transmission-form-list> -->
+<app-transmission-list
+  [selectedValue]="transmission.value"
+  (selectTransmission)="setTransmission($event)"
+></app-transmission-list>
+<app-motor-list
+  [selectedValue]="motor.value"
+  (selectedMotor)="setMotor($event)"
+></app-motor-list>
+<!-- <app-motor-form-list [motor]="motor"> </app-motor-form-list>
+ --><app-images-form-list [images]="images"></app-images-form-list>

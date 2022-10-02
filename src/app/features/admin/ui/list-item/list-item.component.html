@@ -1,0 +1,7 @@
+<div
+  [ngClass]="{ 'bg-dark': selected, 'text-white': selected }"
+  [class.selected]="selected"
+  (click)="handleClicked()"
+>
+  {{ value }}
+</div>
