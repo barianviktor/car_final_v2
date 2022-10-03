@@ -8,17 +8,18 @@
       [currentValue]="queryParams.maker"
       (selectEmitter)="setMaker($event)"
     ></app-search-makers>
-    <app-search-motors
+    <!--     <app-search-motors
       [currentValue]="queryParams.motor"
       (selectEmitter)="setMotor($event)"
     ></app-search-motors>
     <app-search-transmissions
       [currentValue]="queryParams.transmission"
       (selectEmitter)="setTransmission($event)"
-    ></app-search-transmissions>
-    <app-search-price></app-search-price>
-    <app-search-seats></app-search-seats>
-    <app-search-model></app-search-model>
+    ></app-search-transmissions> -->
   </div>
-  <section class="search-result"></section>
+  <section class="search-result">
+    <div *ngIf="results$ | async as results">
+      {{ results | json }}
+    </div>
+  </section>
 </div>

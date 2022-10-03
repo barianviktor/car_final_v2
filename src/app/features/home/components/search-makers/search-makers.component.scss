@@ -1,17 +1,20 @@
 .makers-container{
     width: 100%;
-    grid-template-columns:repeat(2, 50%);
+    /* grid-template-columns:repeat(2, 50%);
     grid-auto-flow: row;
-    display: grid;
+    display: grid; */
+    display: flex;
+    flex-wrap: wrap;
     
 }
 .maker-item{
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.1s ease-in;
 }
-.maker-item img {
-    width: 50%;
+.maker-item img{
+    width: 40%;
 }

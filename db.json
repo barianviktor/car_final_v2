@@ -1,19 +1,335 @@
 {
-  "posts": [
+  "colors": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Black",
+      "color": "#000000",
+      "id": 1
+    },
+    {
+      "name": "Astro Black",
+      "color": "#0d0d0d",
+      "id": 2
+    },
+    {
+      "name": "Red",
+      "color": "#f52929",
+      "id": 3
+    },
+    {
+      "name": "Granite Gray",
+      "color": "#676767",
+      "id": 4
     }
   ],
-  "comments": [
+  "makers": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Mercedes-Benz",
+      "icon_path": "https://logodownload.org/wp-content/uploads/2014/04/mercedes-benz-logo-4-1.png",
+      "id": 1
+    },
+    {
+      "name": "BMW",
+      "icon_path": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-5.png",
+      "id": 2
+    },
+    {
+      "name": "Porsche",
+      "icon_path": "https://logodownload.org/wp-content/uploads/2021/02/porsche-logo-7.png",
+      "id": 3
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "designs": [
+    {
+      "id": 0,
+      "name": "Sedan"
+    },
+    {
+      "id": 1,
+      "name": "Hatchback"
+    },
+    {
+      "id": 2,
+      "name": "Coupe"
+    },
+    {
+      "id": 3,
+      "name": "Wagon"
+    },
+    {
+      "id": 4,
+      "name": "Convertible"
+    },
+    {
+      "id": 5,
+      "name": "Off Road / SUV"
+    },
+    {
+      "id": 6,
+      "name": "Pickup Truck"
+    },
+    {
+      "id": 7,
+      "name": "Van / Minivan"
+    }
+  ],
+  "motors": [
+    {
+      "id": 0,
+      "name": "Electric"
+    },
+    {
+      "id": 1,
+      "name": "Plug in Hybrid"
+    },
+    {
+      "id": 2,
+      "name": "Gasoline"
+    },
+    {
+      "id": 3,
+      "name": "Diesel"
+    }
+  ],
+  "transmission": [
+    {
+      "id": 0,
+      "name": "Automatic"
+    },
+    {
+      "id": 1,
+      "name": "Manual"
+    }
+  ],
+  "articles": [
+    {
+      "description": "A Plug-in Hybrid technológiával felszerelt A-osztály limuzin egyesíti a villanymotor dinamikáját és hatékonyságát a belső égésű motorok hatótávolságával akár 160 kW (218 LE) rendszerteljesítményig,[1] és 450 Nm maximális forgatónyomatékig.[1]. Az elektromotor további teljesítményt bocsát rendelkezésre a gyorsításnál, vagy városban közlekedve egyedül akár 60-71 kilométert[2], bír, így Ön napi útjai nagyobb részét a környezetet kímélve, helyi károsanyag-kibocsátás nélkül teheti meg.",
+      "title": "A 250 e Plug-in Hybrid",
+      "image": 4,
+      "id": 1
+    },
+    {
+      "description": "A Plug-in Hybrid technológiával felszerelt A-osztály limuzin egyesíti a villanymotor dinamikáját és hatékonyságát a belső égésű motorok hatótávolságával akár 160 kW (218 LE) rendszerteljesítményig,[1] és 450 Nm maximális forgatónyomatékig.[1]. Az elektromotor további teljesítményt bocsát rendelkezésre a gyorsításnál, vagy városban közlekedve egyedül akár 60-71 kilométert[2], bír, így Ön napi útjai nagyobb részét a környezetet kímélve, helyi károsanyag-kibocsátás nélkül teheti meg.",
+      "title": "A 250 e Plug-in Hybrid",
+      "image": 7,
+      "id": 2
+    },
+    {
+      "description": "Analóg precizitás digitális integrációval. A 911 belső tere a hagyományos erősségek és az új lehetőségek házasításával jött létre, sportautóként pedig kimondottan a vezetőre koncentrál.",
+      "title": "Belső tér",
+      "image": 12,
+      "id": 3
+    }
+  ],
+  "images": [
+    {
+      "date": "2022-09-24T21:56:43.864Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image.component.damq4.3303754963959.jpg/mercedes-benz-a-class-v177-design-contentgallery-front-01-2730x1536-07-2018.jpg",
+      "id": 1
+    },
+    {
+      "date": "2022-09-24T21:56:43.864Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_841962961.component.damq5.3203698447570.jpg/mercedes-benz-a-class-v177-assistancesystems-contentgallery-multibeamled-02-2730x1536-02-2019.jpg",
+      "id": 2
+    },
+    {
+      "date": "2022-09-24T21:56:43.864Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/simple_stage.component.damq4.3305804656391.jpg/A-Class-Saloon_V177_Stage_Overview_2730x1213.jpg",
+      "id": 3
+    },
+    {
+      "date": "2022-09-24T21:56:43.864Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/simple_teaser/simple_teaser_item_c.component.damq6.3306885772390.jpg/mercedes-benz-a-class-v177-highlights-plug-in-hybrid-2730x1536-11-2021.jpg",
+      "id": 4
+    },
+    {
+      "date": "2022-09-24T21:56:43.864Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem_1135868572/hotspot_module_1714055044/hotspot_simple_image.component.damq4.3304447275086.jpg/mercedes-amg-a-class-v177-performance-2730x1536-05-2019.jpg",
+      "id": 5
+    },
+    {
+      "date": "2022-09-24T21:56:43.864Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_1034355614.component.damq5.3195071863479.jpg/mercedes-benz-a-class-v177-design-contentgallery-rearenddesign-02-2730x1536-07-2018.jpg",
+      "id": 6
+    },
+    {
+      "date": "2022-09-26T08:06:31.490Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/simple_teaser/simple_teaser_item_c.component.damq6.3306885772390.jpg/mercedes-benz-a-class-v177-highlights-plug-in-hybrid-2730x1536-11-2021.jpg",
+      "id": 7
+    },
+    {
+      "date": "2022-09-26T08:06:31.490Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs_1681858178/tabitem_1135868572/hotspot_module_1714055044/hotspot_simple_image.component.damq4.3304447275086.jpg/mercedes-amg-a-class-v177-performance-2730x1536-05-2019.jpg",
+      "id": 8
+    },
+    {
+      "date": "2022-09-26T08:06:31.490Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image.component.damq4.3303754963959.jpg/mercedes-benz-a-class-v177-design-contentgallery-front-01-2730x1536-07-2018.jpg",
+      "id": 9
+    },
+    {
+      "date": "2022-09-26T08:06:31.490Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/tabs/tabitem/hotspot_module/hotspot_simple_image/hotspot_item_841962961.component.damq5.3203698447570.jpg/mercedes-benz-a-class-v177-assistancesystems-contentgallery-multibeamled-02-2730x1536-02-2019.jpg",
+      "id": 10
+    },
+    {
+      "date": "2022-09-26T08:06:31.490Z",
+      "path": "https://www.mercedes-benz.hu/content/hungary/hu/passengercars/models/saloon/a-class/overview/_jcr_content/root/responsivegrid/simple_stage.component.damq4.3305804656391.jpg/A-Class-Saloon_V177_Stage_Overview_2730x1213.jpg",
+      "id": 11
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/hu/budapest/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Feature-Description/Feature-description_Interior_911-Carrera.jpg?rev=-1&w=undefined",
+      "id": 12
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM19_0530_11.jpg?rev=-1&w=1000",
+      "id": 13
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM21_3203_6.jpg?rev=-1&w=1920",
+      "id": 14
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM21_3135_2.jpg?rev=-1&w=1920",
+      "id": 15
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Model-Teaser/911/CZ20V03OX0004_rgb.jpg?rev=-1&w=",
+      "id": 16
+    },
+    {
+      "date": "2022-09-30T10:14:10.201Z",
+      "path": "https://assets.porsche.com/-/media/Project/DealerWebsites/SharedDealersWebsite/Master-Model-Page/911-Carrera-and-Targa/Media-gallery/911-Carrera_VM18_3899_8.jpg?rev=-1&w=1920",
+      "id": 17
+    }
+  ],
+  "smartpoints": [
+    {
+      "description": "Autópályán, országúton vagy városi forgalomban: Az intelligens világítási funkcióknak köszönhetően az adaptív MULTIBEAM LED fényszórók a körülményekhez igazodva világítják meg az úttestet, a fényszórók pedig egyedileg szabályozható LED-ek segítségével reagálnak az aktuális forgalmi helyzetre.",
+      "title": "MULTIBEAM LED",
+      "x": 33,
+      "y": 64,
+      "image": 2,
+      "id": 1
+    },
+    {
+      "description": "asddddddddddddddddas asfas fs     qwewqewqe sadasnbg dsadqweqw",
+      "title": "MULTIBEAM LED",
+      "x": 44,
+      "y": 57,
+      "image": null,
+      "id": 2
+    },
+    {
+      "description": "A HANDS-FREE ACCESS segítségével könnyen berakodhatja a csomagjait: A csomagtérfedél érintés nélkül nyílik ki. A rendszernek a hátsó lökhárító alá beépített szenzorai felismerik az Ön láblendítő mozdulatát. Ez különösen akkor hasznos segítség, amikor a bevásárlásból jövet egyik keze sem szabad a sok csomag miatt.",
+      "title": "HANDS-FREE ACCESS",
+      "x": 80,
+      "y": 35,
+      "image": 6,
+      "id": 3
+    },
+    {
+      "description": "Nagyon meno ules",
+      "title": "Ules",
+      "x": 61,
+      "y": 39,
+      "image": 15,
+      "id": 4
+    },
+    {
+      "description": "halulrol is meno",
+      "title": "halulrol is meno",
+      "x": 79,
+      "y": 48,
+      "image": 17,
+      "id": 5
+    },
+    {
+      "description": "elorol is meno",
+      "title": "elorol is meno",
+      "x": 16,
+      "y": 49,
+      "image": null,
+      "id": 6
+    }
+  ],
+  "smartcards": [
+    {
+      "image": 1,
+      "smartpoints": [
+        1,
+        2,
+        3
+      ],
+      "id": 1
+    },
+    {
+      "image": 14,
+      "smartpoints": [
+        4,
+        5,
+        6
+      ],
+      "id": 2
+    }
+  ],
+  "models": [
+    {
+      "name": "Class-A",
+      "maker": 1,
+      "id": 1
+    },
+    {
+      "name": "Class-A",
+      "maker": 1,
+      "id": 2
+    },
+    {
+      "name": "911 Carrera",
+      "maker": 3,
+      "id": 3
+    }
+  ],
+  "cartypes": [
+    {
+      "articles": [
+        1
+      ],
+      "images": [
+        5
+      ],
+      "smartcards": [
+        1
+      ],
+      "model": 1,
+      "design": 1,
+      "seats": 5,
+      "title": "A-osztály limuzin.",
+      "titleImage": 3,
+      "maker": 1,
+      "id": 1
+    },
+    {
+      "articles": [
+        3
+      ],
+      "images": [
+        13
+      ],
+      "smartcards": [
+        2
+      ],
+      "model": 3,
+      "design": 2,
+      "seats": 2,
+      "title": "911 Carrera",
+      "titleImage": 16,
+      "maker": 3,
+      "id": 2
+    }
+  ]
 }

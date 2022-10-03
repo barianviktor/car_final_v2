@@ -18,6 +18,7 @@ import { Imodeldto } from '../shared/interfaces/dto/imodeldto';
 import { Ismartcarddto } from '../shared/interfaces/dto/ismartcarddto';
 import { Iarticle } from '../shared/interfaces/models/iarticle';
 import { Icartype } from '../shared/interfaces/models/icartype';
+import { ICartypeSearch } from '../shared/interfaces/models/icartype-search';
 import { Idesign } from '../shared/interfaces/models/idesign';
 import { Iimage } from '../shared/interfaces/models/iimage';
 import { Imaker } from '../shared/interfaces/models/imaker';
@@ -189,12 +190,87 @@ export class CartypeService {
       )
     );
   }
+  getDataToCardLink$(cartype: Icartypedto): Observable<Icartype> {
+    return forkJoin({
+      cartype: of(cartype),
+      articles: from(cartype.articles).pipe(
+        mergeMap((index: number) => {
+          return this.articleService.getArticle$(index);
+        }),
+        toArray()
+      ),
+      smartcards: from(cartype.smartcards).pipe(
+        mergeMap((index: number) => {
+          return this.smartcardService.getSmartCard$(index);
+        }),
+        toArray()
+      ),
+      images: from(cartype.images).pipe(
+        mergeMap((index: number) => {
+          return this.imageService.getImage$(index);
+        }),
+        toArray()
+      ),
+      design: this.designService.getDesign$(cartype.design),
+      titleImage: this.imageService.getImage$(cartype.titleImage),
+      model: this.modelService.getModel$(cartype.model),
+      maker: this.makerService.getMaker$(cartype.maker),
+    }).pipe(
+      map(
+        (fj: {
+          cartype: Icartypedto;
+          articles: Iarticle[];
+          smartcards: Ismartcard[];
+          images: Iimage[];
+          titleImage: Iimage;
+          model: Imodel;
+          design: Idesign;
+          maker: Imaker;
+        }) => {
+          let cartype: Icartype = {
+            id: fj.cartype.id!,
+            articles: fj.articles,
+            smartcards: fj.smartcards,
+            seats: fj.cartype.seats,
+            title: fj.cartype.title,
+            titleImage: fj.titleImage,
+            model: fj.model,
+            design: fj.design,
+            images: fj.images,
+            maker: fj.maker,
+          };
+          return cartype;
+        }
+      )
+    );
+  }
   getCartype$(id: number): Observable<Icartype> {
     return this.http.get<Icartypedto>(environment.api + '/cartypes/' + id).pipe(
       switchMap((cartype: Icartypedto) => {
         return this.getDatasToCartype$(cartype);
       })
     );
+  }
+  getCartypeByParam$(param: ICartypeSearch): Observable<Icartype[]> {
+    let p: any = {};
+    if (param.design) {
+      p.design = param.design;
+    }
+    if (param.maker) {
+      p.maker = param.maker;
+    }
+
+    return this.http
+      .get<Icartypedto[]>(environment.api + '/cartypes', { params: p })
+      .pipe(
+        switchMap((cartypes: Icartypedto[]) => {
+          return from(cartypes);
+        }),
+        mergeMap((cartype: Icartypedto) => {
+          return this.getDataToCardLink$(cartype);
+        }),
+        toArray()
+      );
   }
   searchCartype$() {}
 }

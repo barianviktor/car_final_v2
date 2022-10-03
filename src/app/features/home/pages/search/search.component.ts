@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { CartypeService } from 'src/app/services/cartype.service';
+import { Icartypedto } from 'src/app/shared/interfaces/dto/icartypedto';
+import { Icartype } from 'src/app/shared/interfaces/models/icartype';
 import { ICartypeSearch } from 'src/app/shared/interfaces/models/icartype-search';
 
 @Component({
@@ -11,23 +15,23 @@ export class SearchComponent implements OnInit {
   queryParams: ICartypeSearch = {
     design: undefined,
     maker: undefined,
-    seats: undefined,
-    price: undefined,
-    model: '',
-    motor: undefined,
-    transmission: undefined,
   };
-
-  constructor(private router: Router, private route: ActivatedRoute) {
-    this.route.queryParamMap.subscribe(({ params }: Params) => {
-      this.queryParams = {
-        ...params,
-      };
-      console.log(this.queryParams);
-    });
+  results$: Observable<Icartype[]>;
+  constructor(
+    private cartypeService: CartypeService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.results$ = this.cartypeService.getCartypeByParam$(this.queryParams);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.queryParamMap.subscribe(({ params }: Params) => {
+      this.queryParams.design = params.design;
+      this.queryParams.maker = params.maker;
+      this.results$ = this.cartypeService.getCartypeByParam$(this.queryParams);
+    });
+  }
 
   setDesign(index: number) {
     this.queryParams.design == index
@@ -41,7 +45,7 @@ export class SearchComponent implements OnInit {
       : (this.queryParams.maker = index);
     this.go();
   }
-  setMotor(index: number) {
+  /*   setMotor(index: number) {
     this.queryParams.motor == index
       ? (this.queryParams.motor = undefined)
       : (this.queryParams.motor = index);
@@ -52,7 +56,7 @@ export class SearchComponent implements OnInit {
       ? (this.queryParams.transmission = undefined)
       : (this.queryParams.transmission = index);
     this.go();
-  }
+  } */
   go() {
     this.router.navigate(['/search'], { queryParams: this.queryParams });
   }
