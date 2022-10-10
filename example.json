@@ -1,0 +1,100 @@
+{
+  "example_cards": [
+    {
+      "id": 0,
+      "maker": {
+        "id": 0,
+        "name": "BMW",
+        "image_path": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-5.png"
+      },
+      "model": "I7",
+      "types": [
+        {
+          "id": 0,
+          "name": "Electric"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 0,
+          "image_path": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYfQ9Pl10tLhu1XzWVo7puMLWFmdkAj5DOPitIqZ8XgY1nTNIowJ4HO3zkyXq%25sGM8snGhMQSk%2508Xc9Vo74giUlNF1VgxNJ0%25ls2oub5imC2yRCzXeTt%25ViPRKVZVYOMwWh1DMztrOweqVYDaf4gxjmztYRSG3Z67aftxd9Agw1RSfWQo4E%25VxdSeZLKruzWQdjcykp3aeZQ6KdvZXRjcZwBQ1Arx6Kc%252GOI4WwBKupUPCFe%252B3ioJOIjup2XH5Glv63iprJtxrGwXHi4Trd09%25rJH0Km%252%25ia4WsKokGpc1Q8CBsJdoSWZ35uMwjhL"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "maker": {
+        "id": 0,
+        "name": "BMW",
+        "image_path": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-5.png"
+      },
+      "model": "4 Coupé",
+      "types": [
+        {
+          "id": 1,
+          "name": "Gasoline"
+        },
+        {
+          "id": 2,
+          "name": "Diesel"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1,
+          "image_path": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYf0jka10tLhu1XzWVo7puMLWFmdkAj5DOPEtpsZ8XgY1nTNIowJ4HO3zkyXq%25sGM8snGhMQSk%2508Xc9Vo74gA6%25NF1VgxNJ0%25ls2oub5imC2yRCzXeTt%25ViPRKVZVYpwQWh1DMztIAzeqVYDafaOxjmztYRSRgL67aftxdxUew1RSfWQlSD%25VxdSeZsbtuzWQdjc0X73aeZQ6KAnkXRjcZwBO5zrx6Kc%252yu84WwBKupCVJFe%252B3iEzxIjup2XH5pcv63iprJ8i0GwXHi4TPaC9%25rJHFlMgPou4TJIsDVvL3FlTv0JkCyXIslGATO%25Crv0s9Ol8FE4GA0ogsPoNF9OALU0M7kIogOybMDCnvLUgChDYF5GybUEqYtB89ChbNmtjIPoEqhk7f6YMLNmqn1SuwDyk7m5VdKIYCn178zQgQtE5V1Pa8ZmfN8zVMRPsMSkPazDxM77dnMRaYWD0QQ5DxRteYCfZ8YWxfjxvgcPteWS6WGgKMfjedwe28BDFjTgH%25ekxh06FXRTaDWZbQmStyl"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "maker": {
+        "id": 0,
+        "name": "BMW",
+        "image_path": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-5.png"
+      },
+      "model": "X6",
+      "types": [
+        {
+          "id": 1,
+          "name": "Gasoline"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1,
+          "image_path": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYfy91y10tLhu1XzWVo7puMLWFmdkAj5DOPcj2%25Z8XgY1nTNIowJ4HO3zkyXq%25sGM8snGhMQSk%2508Xc9Vo74g383NF1VgxNJ0%25ls2oub5imC2yRCzXeTt%25ViPRKVZVYVegWh1DMztIAzeqVYDafzOPjmztYRSFgx67aftxdIU1w1RSfWQWbr%25VxdSeZWYYuzWQdjcy6h3aeZQ6KCmXXRjcZwB6kUrx6Kc%252%251Q4WwBKupUIaFe%252B3iKL2Ijup2XHBR4v63iprJyxUGwXHi4TCYB9%25rJHFlE1mou4TJIsN8WL3FlTv0kOUyXIslGAtWjCrv0s9OfeFE4GA0ogS6kNF9OALUd1XkIogOybQ1dnvLUgChZnA5GybUEqcrO89ChbNmKMVPoEqhk7B1UMLNmqn12YYDyk7m5VpK6YCn178zmFltE5V1Pa7cPfN8zVMR1KJSkPazDxTKAdnMRaYWlt1Q5DxRtesQOZ8YWxfj0GgcPteWS6ANQKM4eJOiwWNRbsj43aJzMxQUdqfYLT"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "maker": {
+        "id": 0,
+        "name": "BMW",
+        "image_path": "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-5.png"
+      },
+      "model": "3 Touring",
+      "types": [
+        {
+          "id": 1,
+          "name": "Gasoline"
+        },
+        {
+          "id": 2,
+          "name": "Diesel"
+        },
+        {
+          "id": 3,
+          "name": "Plug-In-Hibrid"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1,
+          "image_path": "https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYfzKxG10tLhu1XzWVo7puMLWFmdkAj5DOP4tFpZ8XgY1nTNIowJ4HO3zkyXq%25sGM8snGhMQSk%2508Xc9Vo74gY8TNF1VgxNJ0%25ls2oub5imC2yRCzXeTt%25ViPRKVZVYVysWh1DMzt4i%25eqVYDafvOjjmztYRSFtZ67aftxdRTJw1RSfWQWTC%25VxdSeZelhuzWQdjcjm13aeZQ6KAZfXRjcZwBO24rx6Kc%252gUD4WwBKupU1ZFe%252B3ibvPIjup2XHhDMv63iprJqYrGwXHi4Tmtj9%25rJHFl7frou4TJIs8NSL3FlTv0PldyXIslGAM52Crv0s9ODGTE4GA0ogY%25ZNF9OALUdylkIogOybQC5nvLUgChZU05GybUEqcbV89ChbNmK3LPoEqhk7BraMLNmqn124YDyk7m5VpebYCn178zijvtE5V1PaH6LfN8zVMRJ4DSkPazDxTQAdnMRaYWlH8Q5DxRtesJrZ8YWxfjRWkcPteWS6xwBKMfjedwWChBDS6jQ%25eTQ2Ydw6ZujlgptQ%25wc36s%25ifZu%25KXwM6HSc3uBr%25DBJdKX324uYiTQBrXpFOPflZ24riIgD0scpF4HvUbJ0KiIFJGbhZABHvIT9hq2O2JGvloqmWgpT9GsLmMKUilo90y7DqbHsLoAC1BMhJ0yLOEVSBqTACygNzBomlOECUkae27sgNEbnRrX10UkNh5bryVAbnkq8h4zzOh5nmPq4aagq857M5HfRUmP81D8Ihxb7MPVYPpGWh1DMztMC0eqVYDafDE7jmztYRSYwh67aftxdt%25iw1RSfWQf8r%25VxdSeZk42uzWQdjcn633aeZQ6K5JiXRjcZwB8Gvrxlc9Nv2Z7d5yKlHS9fxQun%25P6ebo"
+        }
+      ]
+    }
+  ]
+}
